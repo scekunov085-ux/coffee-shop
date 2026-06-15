@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roast & Relax | Меню</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #FFF9F5;
+            color: #2D2B28;
+        }
+        .header {
+            background: #2D2B28;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5rem; }
+        .header span { color: #C47B4B; }
+        .nav {
+            background: #C47B4B;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .menu-category {
+            margin-bottom: 50px;
+        }
+        .menu-category h2 {
+            font-size: 2rem;
+            color: #C47B4B;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #F0E0D0;
+            padding-bottom: 10px;
+        }
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .menu-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .menu-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .item-info h3 { font-size: 1.3rem; margin-bottom: 5px; }
+        .item-info p { color: #7A6B5D; font-size: 0.9rem; }
+        .item-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #C47B4B;
+        }
+        .footer {
+            background: #2D2B28;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        @media (max-width: 768px) {
+            .menu-item { flex-direction: column; text-align: center; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Roast & <span>Relax</span></h1>
+        <p>Наше меню</p>
+    </div>
+    <div class="nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="contacts.html">Контакты</a>
+    </div>
+
+    <div class="container">
+        <div class="menu-category">
+            <h2>☕ Кофе</h2>
+            <div class="menu-items">
+                <div class="menu-item"><div class="item-info"><h3>Эспрессо</h3><p>30 мл чистого удовольствия</p></div><div class="item-price">180 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Доппио</h3><p>Двойной эспрессо</p></div><div class="item-price">250 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Американо</h3><p>Эспрессо + горячая вода</p></div><div class="item-price">220 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Латте</h3><p>Кофе с нежной молочной пенкой</p></div><div class="item-price">350 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Капучино</h3><p>Классический баланс кофе и молока</p></div><div class="item-price">350 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Раф</h3><p>Сливочный с ванилью</p></div><div class="item-price">390 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Флэт Уайт</h3><p>Австралийская классика</p></div><div class="item-price">380 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Мокко</h3><p>Кофе с шоколадом</p></div><div class="item-price">420 ₽</div></div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h2>🍰 Десерты</h2>
+            <div class="menu-items">
+                <div class="menu-item"><div class="item-info"><h3>Чизкейк</h3><p>Нью-Йорк с малиновым соусом</p></div><div class="item-price">320 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Тирамису</h3><p>Итальянская классика</p></div><div class="item-price">350 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Круассан</h3><p>С маслом/шоколадом/сыром</p></div><div class="item-price">180 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Брауни</h3><p>С грецким орехом</p></div><div class="item-price">250 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Эклер</h3><p>Заварной с карамелью</p></div><div class="item-price">210 ₽</div></div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h2>🍵 Чай и лимонады</h2>
+            <div class="menu-items">
+                <div class="menu-item"><div class="item-info"><h3>Зелёный чай</h3><p>Жасмин, сенча</p></div><div class="item-price">200 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Чёрный чай</h3><p>Ассам, эрл грей</p></div><div class="item-price">200 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Лимонад "Цитрус"</h3><p>Свежевыжатый лимон, мята</p></div><div class="item-price">350 ₽</div></div>
+                <div class="menu-item"><div class="item-info"><h3>Матча латте</h3><p>Японский чай с молоком</p></div><div class="item-price">400 ₽</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Roast & Relax | ул. Кофейная, 15 | Ежедневно 8:00-22:00</p>
+        <p>📞 +7 (999) 123-45-67 | 📧 hello@roastrelax.ru</p>
+        <p><a href="contacts.html" style="color:#C47B4B;">Забронировать столик →</a></p>
+    </div>
+</body>
+</html>
