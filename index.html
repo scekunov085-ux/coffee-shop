@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня Roast & Relax</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #FFF9F5;
+            color: #2D2B28;
+        }
+        .header {
+            background: #2D2B28;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+        }
+        .header span {
+            color: #C47B4B;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: #C47B4B;
+            padding: 12px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #C47B4B;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .price {
+            color: #C47B4B;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .footer {
+            background: #2D2B28;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Roast & <span>Relax</span></h1>
+        <p>Лучший кофе в городе</p>
+    </div>
+    <div class="nav">
+        <a href="#">Главная</a>
+        <a href="#">Меню</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+    </div>
+    <div class="hero">
+        <div>
+            <h2>Добро пожаловать</h2>
+            <p>Свежая обжарка, уютная атмосфера, идеальный кофе</p>
+            <a href="#" class="btn">Забронировать столик</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom:40px;">Наше меню</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Латте</h3>
+                <p>Нежный кофе с молочной пенкой</p>
+                <div class="price">350 ₽</div>
+            </div>
+            <div class="menu-card">
+                <h3>Капучино</h3>
+                <p>Итальянская классика</p>
+                <div class="price">350 ₽</div>
+            </div>
+            <div class="menu-card">
+                <h3>Раф</h3>
+                <p>С ванильным сахаром</p>
+                <div class="price">390 ₽</div>
+            </div>
+            <div class="menu-card">
+                <h3>Круассан</h3>
+                <p>С маслом или шоколадом</p>
+                <div class="price">180 ₽</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2025 Roast & Relax | ул. Кофейная, 15 | Ежедневно 8:00-22:00</p>
+    </div>
+</body>
+</html>
