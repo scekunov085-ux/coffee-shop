@@ -15,7 +15,6 @@
             background: #FFF9F5;
             color: #2D2B28;
         }
-        /* Шапка */
         .header {
             background: #2D2B28;
             color: white;
@@ -28,10 +27,6 @@
         .header span {
             color: #C47B4B;
         }
-        .header p {
-            color: #aaa;
-        }
-        /* Навигация */
         .nav {
             background: #C47B4B;
             display: flex;
@@ -45,18 +40,15 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            transition: 0.3s;
         }
         .nav a:hover {
-            opacity: 0.8;
-            transform: scale(1.05);
+            text-decoration: underline;
         }
-        /* Hero */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            height: 550px;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,139 +56,53 @@
             color: white;
         }
         .hero h2 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
         }
         .btn {
             background: #C47B4B;
             color: white;
-            padding: 12px 35px;
+            padding: 12px 30px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 30px;
             display: inline-block;
-            font-weight: bold;
-            transition: 0.3s;
         }
-        .btn:hover {
-            background: #A56238;
-            transform: translateY(-3px);
-        }
-        /* Контейнер */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 60px 20px;
         }
-        /* Секция "О нас" */
-        .about {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .about-text {
-            flex: 1;
-        }
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #C47B4B;
-        }
-        .about-image {
-            flex: 1;
-        }
-        .about-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        /* Превью меню */
-        .menu-preview {
-            background: #F5EDE6;
-            border-radius: 30px;
-            padding: 40px;
-            text-align: center;
-        }
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
         .menu-card {
             background: white;
-            border-radius: 20px;
-            padding: 25px;
-            transition: 0.3s;
-        }
-        .menu-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .menu-card h4 {
-            font-size: 1.4rem;
-            margin: 10px 0;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .price {
             color: #C47B4B;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .icon {
-            font-size: 2.5rem;
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #C47B4B;
-            color: #C47B4B;
-            padding: 10px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 30px;
+            font-size: 1.5rem;
             font-weight: bold;
         }
-        /* Отзывы */
-        .reviews {
-            background: white;
-            border-radius: 30px;
-            padding: 40px;
-        }
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        .review-card {
-            background: #FFF9F5;
-            padding: 20px;
-            border-radius: 15px;
-            font-style: italic;
-        }
-        /* Подвал */
         .footer {
             background: #2D2B28;
             color: white;
             text-align: center;
             padding: 30px;
         }
-        @media (max-width: 768px) {
-            .hero h2 { font-size: 2rem; }
-            .about { flex-direction: column; }
-        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Roast & <span>Relax</span></h1>
-        <p>Кофе с душой</p>
+        <p>Лучший кофе в городе</p>
     </div>
+
     <div class="nav">
         <a href="index.html">Главная</a>
         <a href="menu.html">Меню</a>
@@ -212,74 +118,34 @@
     </div>
 
     <div class="container">
-        <div class="about">
-            <div class="about-text">
-                <h3>Наша история</h3>
-                <p>Roast & Relax открылась в 2020 году с простой идеей: дать людям место, где кофе — это ритуал, а не просто напиток. Мы отбираем зёрна вручную и обжариваем их малыми партиями.</p>
-                <p>Наши бариста — настоящие профессионалы, которые помогут выбрать идеальный сорт под ваше настроение.</p>
+        <h2 style="text-align:center; margin-bottom:40px;">Наше меню</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Латте</h3>
+                <p>Нежный кофе с молочной пенкой</p>
+                <div class="price">350 ₽</div>
             </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Интерьер кофейни">
+            <div class="menu-card">
+                <h3>Капучино</h3>
+                <p>Итальянская классика</p>
+                <div class="price">350 ₽</div>
             </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="menu-preview">
-            <h3>Популярное сегодня</h3>
-            <div class="menu-grid">
-                <div class="menu-card">
-                    <div class="icon">☕</div>
-                    <h4>Латте</h4>
-                    <p>Нежный с шелковистой пенкой</p>
-                    <div class="price">350 ₽</div>
-                </div>
-                <div class="menu-card">
-                    <div class="icon">🍫</div>
-                    <h4>Капучино</h4>
-                    <p>Итальянская классика</p>
-                    <div class="price">350 ₽</div>
-                </div>
-                <div class="menu-card">
-                    <div class="icon">🌿</div>
-                    <h4>Раф</h4>
-                    <p>Ванильный или солёная карамель</p>
-                    <div class="price">390 ₽</div>
-                </div>
-                <div class="menu-card">
-                    <div class="icon">🥐</div>
-                    <h4>Круассан</h4>
-                    <p>С маслом, шоколадом или сыром</p>
-                    <div class="price">180 ₽</div>
-                </div>
+            <div class="menu-card">
+                <h3>Раф</h3>
+                <p>С ванильным сахаром</p>
+                <div class="price">390 ₽</div>
             </div>
-            <a href="menu.html" class="btn-outline">Смотреть всё меню →</a>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="reviews">
-            <h3 style="text-align:center;">Что говорят наши гости</h3>
-            <div class="review-grid">
-                <div class="review-card">
-                    <p>❤️ "Лучший кофе в городе! Атмосфера просто волшебная. Обязательно вернусь!"</p>
-                    <p><strong>— Анна</strong></p>
-                </div>
-                <div class="review-card">
-                    <p>☕ "Брал капучино с собой — очень вкусно. Бариста приятно удивил."</p>
-                    <p><strong>— Дмитрий</strong></p>
-                </div>
-                <div class="review-card">
-                    <p>🍰 "И десерты шикарные! Чизкейк — отдельная любовь."</p>
-                    <p><strong>— Екатерина</strong></p>
-                </div>
+            <div class="menu-card">
+                <h3>Круассан</h3>
+                <p>С маслом или шоколадом</p>
+                <div class="price">180 ₽</div>
             </div>
         </div>
     </div>
 
     <div class="footer">
         <p>© 2025 Roast & Relax | ул. Кофейная, 15 | Ежедневно 8:00-22:00</p>
-        <p style="margin-top: 10px;">📞 +7 (999) 123-45-67 | 📧 hello@roastrelax.ru</p>
+        <p>📞 +7 (999) 123-45-67</p>
     </div>
 </body>
 </html>
