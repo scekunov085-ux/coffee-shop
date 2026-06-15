@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roast & Relax | Контакты</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #FFF9F5;
+            color: #2D2B28;
+        }
+        .header {
+            background: #2D2B28;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5rem; }
+        .header span { color: #C47B4B; }
+        .nav {
+            background: #C47B4B;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .info-card h3 {
+            color: #C47B4B;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .info-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .info-item i {
+            font-size: 1.3rem;
+            color: #C47B4B;
+        }
+        .work-hours {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .booking-form {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .booking-form h3 {
+            color: #C47B4B;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+        }
+        .btn-submit {
+            background: #C47B4B;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background: #A56238;
+        }
+        .map {
+            margin-top: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .map iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+        .success-message {
+            display: none;
+            background: #D4E2D4;
+            color: #2E5C2E;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer {
+            background: #2D2B28;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        @media (max-width: 768px) {
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Roast & <span>Relax</span></h1>
+        <p>Приходите в гости</p>
+    </div>
+    <div class="nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="contacts.html">Контакты</a>
+    </div>
+
+    <div class="container">
+        <div class="contacts-grid">
+            <div>
+                <div class="info-card">
+                    <h3>📍 Как нас найти</h3>
+                    <div class="info-item">📌 г. Москва, ул. Кофейная, 15</div>
+                    <div class="info-item">📞 +7 (999) 123-45-67</div>
+                    <div class="info-item">✉️ hello@roastrelax.ru</div>
+                    <div class="work-hours">
+                        <strong>🕐 Часы работы:</strong><br>
+                        Пн-Пт: 8:00 - 22:00<br>
+                        Сб-Вс: 9:00 - 23:00
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3>🚗 Как добраться</h3>
+                    <p>Метро "Кофейная" (выход к ТЦ "Аромат"), 5 минут пешком. Рядом парковка для гостей.</p>
+                </div>
+            </div>
+
+            <div class="booking-form">
+                <h3>📅 Бронирование столика</h3>
+                <form id="bookingForm">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="tel" id="phone" placeholder="Телефон" required>
+                    <input type="email" id="email" placeholder="Email (необязательно)">
+                    <input type="date" id="date" required>
+                    <select id="time">
+                        <option>10:00</option><option>11:00</option><option>12:00</option>
+                        <option>13:00</option><option>14:00</option><option>15:00</option>
+                        <option>16:00</option><option>17:00</option><option>18:00</option>
+                        <option>19:00</option><option>20:00</option><option>21:00</option>
+                    </select>
+                    <select id="guests">
+                        <option>1 гость</option><option>2 гостя</option><option>3 гостя</option>
+                        <option>4 гостя</option><option>5 гостей</option><option>6+ гостей</option>
+                    </select>
+                    <textarea id="comment" rows="2" placeholder="Особые пожелания..."></textarea>
+                    <button type="submit" class="btn-submit">Забронировать</button>
+                    <div id="successMessage" class="success-message">✅ Спасибо! Мы подтвердим бронирование по телефону.</div>
+                </form>
+            </div>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1x2245.123456789!2x37.617634!3x55.755826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIxLjAiTiAzN8KwMzcnMDMuNSJF!5e0!3m2!1sru!2sru!4v1234567890" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Roast & Relax | ул. Кофейная, 15 | Ежедневно 8:00-22:00</p>
+        <p>📞 +7 (999) 123-45-67 | 📧 hello@roastrelax.ru</p>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            if(!name) { alert('Пожалуйста, укажите имя'); return; }
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
